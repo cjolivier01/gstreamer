@@ -6,6 +6,22 @@
   "version": "0.2.0",
   "configurations": [
     {
+      //
+      // Python: Current File
+      //
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "args": [],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceRoot}/build:${workspaceRoot}/src:${workspaceRoot}/external/MOTChallengeEvalKit"
+      }
+    },
+    {
       "name": "GStreamer - Build and debug",
       "request": "launch",
       "type": "cppdbg",
@@ -53,14 +69,14 @@
       },
       "cwd": "${workspaceFolder}/${config:mesonbuild.buildFolder}/subprojects/gstreamer/tools/",
       //"program": "${workspaceFolder}/${config:mesonbuild.buildFolder}/subprojects/gstreamer/tools/gst-inspect-1.0",
-      "program": "/usr/bin/deepstream-app",
-      //"program": "${workspaceFolder}/builddir/subprojects/gstreamer/tools/gst-launch-1.0",
+      //"program": "/usr/bin/deepstream-app",
+      "program": "${workspaceFolder}/${config:mesonbuild.buildFolder}/subprojects/gstreamer/tools/gst-launch-1.0",
       //"program": "/home/colivier/mambaforge/envs/ubuntu/bin/gst-launch-1.0",
       "args": [
         //"nvh264dec",
         //"nvstreammux",
-        //"playbin",
-        //"uri=file:///olivier-pool/Videos/ev-bs-short/GX010085.MP4"
+        "playbin",
+        "uri=file:///olivier-pool/Videos/ev-bs-short/GX010085.MP4"
         //"videotestsrc",
         //"fakevideodec",6
         //"!",
