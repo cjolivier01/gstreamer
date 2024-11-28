@@ -52,19 +52,25 @@
         "envFile": "${workspaceFolder}/${config:mesonbuild.buildFolder}/meson-vscode.env",
       },
       "cwd": "${workspaceFolder}/${config:mesonbuild.buildFolder}/subprojects/gstreamer/tools/",
-      "program": "${workspaceFolder}/${config:mesonbuild.buildFolder}/subprojects/gstreamer/tools/gst-launch-1.0",
+      //"program": "${workspaceFolder}/${config:mesonbuild.buildFolder}/subprojects/gstreamer/tools/gst-inspect-1.0",
+      "program": "/usr/bin/deepstream-app",
+      //"program": "${workspaceFolder}/builddir/subprojects/gstreamer/tools/gst-launch-1.0",
+      //"program": "/home/colivier/mambaforge/envs/ubuntu/bin/gst-launch-1.0",
       "args": [
-        "playbin",
-        "uri=file:///olivier-pool/Videos/ev-bs-short/GX010085.MP4"
+        //"nvh264dec",
+        //"nvstreammux",
+        //"playbin",
+        //"uri=file:///olivier-pool/Videos/ev-bs-short/GX010085.MP4"
         //"videotestsrc",
-        //"fakevideodec",
+        //"fakevideodec",6
         //"!",
         //"autovideosink"
         //"fakesink",
       ],
       "env": {
-        "GST_DEBUG": "5",
-        // "LD_LIBRARY_PATH": "/home/colivier/mambaforge/envs/ubuntu/lib/x86_64-linux-gnu",
+        //"GST_DEBUG": "4",
+        "LD_LIBRARY_PATH": "/home/colivier/mambaforge/envs/ubuntu/lib:/home/colivier/mambaforge/envs/ubuntu/lib/x86_64-linux-gnu:/opt/nvidia/deepstream/deepstream/lib",
+        "GST_PLUGIN_PATH": "/opt/nvidia/deepstream/deepstream/lib/gst-plugins",
       },
       "preLaunchTask": "Meson: Build all targets",
     }
