@@ -4,7 +4,8 @@
 DEBUG_FLAGS=""
 #DEBUG_FLAGS="--debug -Doptimization=0"
 
-PREFIX="/usr/local"
+PREFIX=/usr
+#PREFIX="/usr/local"
 #PREFIX="/home/colivier/mambaforge/envs/ubuntu"
 
 meson setup -Dlibav=enabled ${DEBUG_FLAGS} --reconfigure -Dgpl=enabled --prefix=${PREFIX} $@ builddir
