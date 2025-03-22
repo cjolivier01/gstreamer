@@ -1,8 +1,8 @@
 #!/bin/bash
 # -Dpython.install_env=/home/colivier/mambaforge/envs/ubuntu 
 
-DEBUG_FLAGS=""
-#DEBUG_FLAGS="--debug -Doptimization=0"
+# DEBUG_FLAGS=""
+DEBUG_FLAGS="--debug -Doptimization=0"
 
 PREFIX=/usr
 #PREFIX="/usr/local"
